@@ -10,4 +10,13 @@
     <button class="hero__button" type="button" id="welcome-button">Bienvenidos</button>
     <p class="hero__greeting" id="welcome-message" aria-live="polite"></p>
 </section>
+
+<section class="services">
+    <h2>Nuestros servicios</h2>
+    <ul class="services__list">
+        {% for servicio in servicios %}
+            <li class="services__item">{{ servicio }}</li>
+        {% endfor %}
+    </ul>
+</section>
 {% endblock %}

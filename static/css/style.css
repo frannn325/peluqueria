@@ -78,3 +78,36 @@ h1 span {
     margin: 1rem 0 0;
     color: var(--beige);
 }
+
+.services {
+    padding: 4rem 2rem;
+    color: var(--bordo-oscuro);
+    text-align: center;
+    background: var(--beige);
+}
+
+.services h2 {
+    margin-top: 0;
+    color: var(--bordo);
+    font-family: Georgia, serif;
+    font-size: 2rem;
+}
+
+.services__list {
+    display: flex;
+    max-width: 48rem;
+    margin: 2rem auto 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.services__item {
+    min-width: 10rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--dorado);
+    border-radius: 4px;
+    background: #fff9ef;
+}
