@@ -105,9 +105,22 @@ h1 span {
 }
 
 .services__item {
+    display: flex;
     min-width: 10rem;
     padding: 1rem 1.5rem;
     border: 1px solid var(--dorado);
     border-radius: 4px;
+    flex-direction: column;
+    gap: 0.5rem;
     background: #fff9ef;
+}
+
+.services__name {
+    font-weight: bold;
+}
+
+.services__price {
+    color: var(--bordo);
+    font-size: 1.25rem;
+    font-weight: bold;
 }

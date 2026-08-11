@@ -3,12 +3,12 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Por ahora los servicios se guardan en una lista de Python.
+# Por ahora los servicios y sus precios se guardan en Python.
 # Más adelante se podrán obtener desde una base de datos.
 SERVICIOS = [
-    "Corte clásico",
-    "Corte + ceja",
-    "Tintura",
+    {"nombre": "Corte clásico", "precio": 8000},
+    {"nombre": "Corte + ceja", "precio": 8500},
+    {"nombre": "Tintura", "precio": 25000},
 ]
 
 
