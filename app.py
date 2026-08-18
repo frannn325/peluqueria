@@ -1,21 +1,17 @@
 from flask import Flask, render_template
 
+from database import inicializar_base_de_datos, obtener_servicios
+
 
 app = Flask(__name__)
-
-# Por ahora los servicios y sus precios se guardan en Python.
-# Más adelante se podrán obtener desde una base de datos.
-SERVICIOS = [
-    {"nombre": "Corte clásico", "precio": 8000},
-    {"nombre": "Corte + ceja", "precio": 8500},
-    {"nombre": "Tintura", "precio": 25000},
-]
+inicializar_base_de_datos()
 
 
 @app.route("/")
 def inicio():
     """Muestra la página principal de la peluquería."""
-    return render_template("index.html", servicios=SERVICIOS)
+    servicios = obtener_servicios()
+    return render_template("index.html", servicios=servicios)
 
 
 if __name__ == "__main__":
